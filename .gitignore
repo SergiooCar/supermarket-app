@@ -1,0 +1,20 @@
+﻿# Config local de VS Code
+.vscode/
+
+# Dependencias de Composer
+vendor/
+composer.lock
+
+# Dependencias de Node.JS
+node_modules/
+package-lock.json
+
+# Variables de entorno
+.env
+
+# Logs del proyecto
+logs/**/*.log
+
+# EXTRA
+public/vendor/
+storage/

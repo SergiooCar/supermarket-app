@@ -1,0 +1,364 @@
+/* =============================================================
+   dark-mode.css — Supermarket App
+   Se activa cuando <html> tiene la clase "dark-mode".
+   Solo añade reglas encima de AdminLTE/Bootstrap, nunca modifica
+   los ficheros originales. Si este CSS no carga, la app queda
+   exactamente igual que en modo claro.
+   ============================================================= */
+
+html.dark-mode {
+    --dm-bg:          #222222;
+    --dm-bg-card:     #2d2d2d;
+    --dm-bg-card-alt: #252526;
+    --dm-bg-input:    #3c3c3c;
+    --dm-text:        #cccccc;
+    --dm-text-muted:  #858585;
+    --dm-border:      #474747;
+    --dm-link:        #4fc1ff;
+    --dm-code-bg:     #252526;
+    --dm-scrollbar:   #424242;
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+html.dark-mode body {
+    background: linear-gradient(160deg, #2e2e2e 0%, #1a1a1a 100%) fixed;
+    background-size: cover;
+    color: var(--dm-text);
+}
+
+/* ── Wrapper & área de contenido ───────────────────────────── */
+html.dark-mode .content-wrapper {
+    background-color: transparent;
+}
+
+/* ── Topbar (main-header) ──────────────────────────────────── */
+html.dark-mode .main-header.navbar {
+    background-color: var(--dm-bg-card-alt) !important;
+    border-bottom: 1px solid var(--dm-border) !important;
+}
+html.dark-mode .main-header .nav-link {
+    color: var(--dm-text) !important;
+}
+html.dark-mode .main-header .nav-link:hover {
+    color: #fff !important;
+}
+html.dark-mode .main-header .navbar-text {
+    color: var(--dm-text);
+}
+html.dark-mode .main-header .nav-item span:not(.badge) {
+    color: var(--dm-text) !important;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+html.dark-mode .main-footer {
+    background-color: var(--dm-bg-card-alt);
+    border-top-color: var(--dm-border);
+    color: var(--dm-text-muted);
+}
+
+/* ── Cards ─────────────────────────────────────────────────── */
+html.dark-mode .card {
+    background-color: var(--dm-bg-card);
+    border-color: var(--dm-border);
+}
+html.dark-mode .card-header {
+    background-color: var(--dm-bg-card-alt);
+    border-bottom-color: var(--dm-border);
+    color: var(--dm-text);
+}
+html.dark-mode .card-body {
+    color: var(--dm-text);
+}
+html.dark-mode .card-footer {
+    background-color: var(--dm-bg-card-alt);
+    border-top-color: var(--dm-border);
+}
+html.dark-mode .card-title {
+    color: var(--dm-text);
+}
+
+/* ── Tablas Bootstrap ──────────────────────────────────────── */
+html.dark-mode .table {
+    color: var(--dm-text);
+}
+html.dark-mode .table th,
+html.dark-mode .table td {
+    border-color: var(--dm-border);
+}
+html.dark-mode .table thead th {
+    background-color: var(--dm-bg-card-alt);
+    border-bottom-color: var(--dm-border);
+    color: var(--dm-text);
+}
+html.dark-mode .table-bordered,
+html.dark-mode .table-bordered th,
+html.dark-mode .table-bordered td {
+    border-color: var(--dm-border);
+}
+html.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+html.dark-mode .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--dm-text);
+}
+
+/* ── Formularios ───────────────────────────────────────────── */
+html.dark-mode .form-control {
+    background-color: var(--dm-bg-input);
+    border-color: var(--dm-border);
+    color: var(--dm-text);
+}
+html.dark-mode .form-control:focus {
+    background-color: var(--dm-bg-input);
+    border-color: #5a8fc0;
+    color: var(--dm-text);
+    box-shadow: 0 0 0 0.2rem rgba(90, 143, 192, 0.25);
+}
+html.dark-mode .form-control::placeholder {
+    color: var(--dm-text-muted);
+}
+html.dark-mode .form-control:disabled,
+html.dark-mode .form-control[readonly] {
+    background-color: var(--dm-bg-card-alt);
+    color: var(--dm-text-muted);
+}
+html.dark-mode .input-group-text {
+    background-color: var(--dm-bg-card-alt);
+    border-color: var(--dm-border);
+    color: var(--dm-text-muted);
+}
+html.dark-mode select.form-control option {
+    background-color: var(--dm-bg-input);
+    color: var(--dm-text);
+}
+html.dark-mode label {
+    color: var(--dm-text);
+}
+
+/* ── Botones sólidos en dark mode ──────────────────────────── */
+html.dark-mode .btn-secondary {
+    background-color: #3c3c3c;
+    border-color: #3c3c3c;
+    color: #e0e3ec;
+}
+html.dark-mode .btn-secondary:hover,
+html.dark-mode .btn-secondary:focus {
+    background-color: #494949;
+    border-color: #494949;
+    color: #fff;
+}
+
+/* ── Código inline ─────────────────────────────────────────── */
+html.dark-mode code {
+    background-color: var(--dm-code-bg);
+    color: #e06c75;
+    border-radius: 3px;
+    padding: 1px 5px;
+}
+html.dark-mode pre {
+    background-color: var(--dm-code-bg);
+    color: var(--dm-text);
+    border-color: var(--dm-border);
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+html.dark-mode a:not(.btn):not(.nav-link):not(.brand-link):not(.small-box-footer):not(.dropdown-item) {
+    color: var(--dm-link);
+}
+html.dark-mode a:not(.btn):not(.nav-link):not(.brand-link):not(.small-box-footer):not(.dropdown-item):hover {
+    color: #a8c8f0;
+}
+
+/* ── Dropdowns ─────────────────────────────────────────────── */
+html.dark-mode .dropdown-menu {
+    background-color: var(--dm-bg-card);
+    border-color: var(--dm-border);
+}
+html.dark-mode .dropdown-item {
+    color: var(--dm-text);
+}
+html.dark-mode .dropdown-item:hover,
+html.dark-mode .dropdown-item:focus {
+    background-color: var(--dm-bg-input);
+    color: var(--dm-text);
+}
+html.dark-mode .dropdown-menu .px-3 {
+    color: var(--dm-text);
+}
+html.dark-mode .dropdown-item.text-danger {
+    color: #e07070 !important;
+}
+html.dark-mode .dropdown-item.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.12);
+    color: #ff8080 !important;
+}
+html.dark-mode .dropdown-divider {
+    border-top-color: var(--dm-border);
+}
+
+/* ── Modales ───────────────────────────────────────────────── */
+html.dark-mode .modal-content {
+    background-color: var(--dm-bg-card);
+    border-color: var(--dm-border);
+}
+html.dark-mode .modal-header {
+    border-bottom-color: var(--dm-border);
+}
+html.dark-mode .modal-footer {
+    border-top-color: var(--dm-border);
+}
+html.dark-mode .modal-title {
+    color: var(--dm-text);
+}
+html.dark-mode .close {
+    color: var(--dm-text);
+    text-shadow: none;
+}
+html.dark-mode .close:hover {
+    color: #fff;
+}
+
+/* ── Alertas ───────────────────────────────────────────────── */
+html.dark-mode .alert {
+    border-color: var(--dm-border);
+}
+
+/* ── Paginación Bootstrap ──────────────────────────────────── */
+html.dark-mode .page-link {
+    background-color: var(--dm-bg-card);
+    border-color: var(--dm-border);
+    color: var(--dm-link);
+}
+html.dark-mode .page-link:hover {
+    background-color: var(--dm-bg-input);
+    color: var(--dm-text);
+    border-color: var(--dm-border);
+}
+html.dark-mode .page-item.disabled .page-link {
+    background-color: var(--dm-bg-card-alt);
+    border-color: var(--dm-border);
+    color: var(--dm-text-muted);
+}
+html.dark-mode .page-item.active .page-link {
+    background-color: #3a6ea8;
+    border-color: #3a6ea8;
+    color: #fff;
+}
+
+/* ── Nav tabs ──────────────────────────────────────────────── */
+html.dark-mode .nav-tabs {
+    border-bottom-color: var(--dm-border);
+}
+html.dark-mode .nav-tabs .nav-link {
+    color: var(--dm-text-muted);
+}
+html.dark-mode .nav-tabs .nav-link:hover {
+    border-color: var(--dm-border);
+    color: var(--dm-text);
+}
+html.dark-mode .nav-tabs .nav-link.active {
+    background-color: var(--dm-bg-card);
+    border-color: var(--dm-border) var(--dm-border) var(--dm-bg-card);
+    color: var(--dm-text);
+}
+
+/* ── AdminLTE: small-box (tarjetas del dashboard) ──────────── */
+/* Las cajas bg-success/bg-danger/bg-info/bg-warning conservan
+   su color de fondo original — solo ajustamos el footer link */
+html.dark-mode .small-box > .small-box-footer {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ── Content header / breadcrumb ───────────────────────────── */
+html.dark-mode .content-header h1 {
+    color: var(--dm-text);
+}
+html.dark-mode .breadcrumb {
+    background-color: transparent;
+}
+html.dark-mode .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--dm-text-muted);
+}
+html.dark-mode .breadcrumb-item.active {
+    color: var(--dm-text-muted);
+}
+
+/* ── Reglas de texto y separadores ────────────────────────────*/
+html.dark-mode hr {
+    border-top-color: var(--dm-border);
+}
+html.dark-mode .text-muted {
+    color: var(--dm-text-muted) !important;
+}
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
+    color: var(--dm-text);
+}
+
+/* ── Scrollbar (Webkit / Chromium) ─────────────────────────── */
+html.dark-mode ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+html.dark-mode ::-webkit-scrollbar-track {
+    background: var(--dm-bg);
+}
+html.dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--dm-scrollbar);
+    border-radius: 4px;
+}
+html.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #595959;
+}
+
+/* ── ag-Grid Alpine — tema oscuro completo ─────────────────── */
+html.dark-mode .ag-theme-alpine {
+    --ag-background-color:              #2d2d2d;
+    --ag-odd-row-background-color:      #252526;
+    --ag-header-background-color:       #222222;
+    --ag-header-foreground-color:       #cccccc;
+    --ag-foreground-color:              #cccccc;
+    --ag-secondary-foreground-color:    #858585;
+    --ag-border-color:                  #474747;
+    --ag-row-border-color:              #474747;
+    --ag-secondary-border-color:        #474747;
+    --ag-row-hover-color:               rgba(125, 168, 224, 0.08);
+    --ag-selected-row-background-color: rgba(58, 110, 168, 0.3);
+    --ag-input-focus-border-color:      #5a8fc0;
+    --ag-range-selection-border-color:  #5a8fc0;
+    --ag-checkbox-unchecked-color:      #858585;
+    --ag-chip-background-color:         #3c3c3c;
+    --ag-control-panel-background-color:#252526;
+    --ag-subheader-background-color:    #222222;
+    --ag-input-border-color:            #474747;
+    --ag-input-background-color:        #3c3c3c;
+    --ag-modal-overlay-background-color:rgba(0, 0, 0, 0.6);
+    --ag-header-column-separator-color: #474747;
+    --ag-column-hover-color:            rgba(125, 168, 224, 0.04);
+}
+html.dark-mode .ag-theme-alpine .ag-root-wrapper {
+    border-color: var(--dm-border);
+}
+html.dark-mode .ag-theme-alpine .ag-paging-panel {
+    background-color: #222222;
+    border-top-color: #474747;
+    color: #cccccc;
+}
+html.dark-mode .ag-theme-alpine .ag-status-bar {
+    background-color: #222222;
+    border-top-color: #474747;
+    color: #cccccc;
+}
+html.dark-mode .ag-theme-alpine .ag-menu {
+    background-color: #2d2d2d;
+    border-color: #474747;
+    color: #cccccc;
+}
+html.dark-mode .ag-theme-alpine .ag-menu-option-active {
+    background-color: #3c3c3c;
+}
+html.dark-mode .ag-theme-alpine .ag-filter-toolpanel-header,
+html.dark-mode .ag-theme-alpine .ag-filter-toolpanel-search {
+    background-color: #252526;
+}

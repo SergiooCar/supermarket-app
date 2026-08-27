@@ -1,0 +1,7 @@
+usuario: 
+
+        admin@supermarket.com
+
+contraseña:
+
+        password
